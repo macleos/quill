@@ -6,9 +6,7 @@ services:
       - "8080:8080"
     depends_on:
       - mongo
-    environment:
-      - VIRTUAL_HOST=htb.penalosa.dev
-      - LETSENCRYPT_HOST=htb.penalosa.dev
+
   mongo:
     image: mongo
     ports:
