@@ -3,10 +3,10 @@
   <div
     class="ui green segment"
     ng-class="{'loading': loading}">
-    <div class="ui header">
+    <div class="ui header white-text">
       Stats
     </div>
-    <div class="content">
+    <div class="content  white-text">
       <em> Last updated: {{fromNow(stats.lastUpdated)}}</em>
       <div class="ui list">
         <div
@@ -60,16 +60,7 @@
             {{stats.confirmed}}
           </div>
         </div>
-        <div
-          class="item">
-          <i class="green circle check icon"></i>
-          <div class="content">
-            <strong>
-              Confirmed (MIT)
-            </strong> :
-            {{stats.confirmedMit}}
-          </div>
-        </div>
+       
         <div class="item">
           <i class="circle red icon"></i>
           <div class="content">
@@ -90,8 +81,8 @@
           </div>
         </div>
 
-        <div class="ui divider"></div>
-
+        <!-- <div class="ui divider"></div> -->
+<!-- 
         <div class="item">
           <i class="child icon"></i>
           <div class="content">
@@ -105,9 +96,9 @@
               XL ({{stats.shirtSizes['XL']}})
               XXL ({{stats.shirtSizes['XXL']}})
           </div>
-        </div>
+        </div> -->
 
-        <div class="item">
+        <!-- <div class="item">
           <i class="child icon"></i>
           <div class="content">
             <strong>
@@ -120,7 +111,7 @@
               XL ({{stats.shirtSizes['WXL']}})
               XXL ({{stats.shirtSizes['WXXL']}})
           </div>
-        </div>
+        </div> -->
 
         <div class="ui divider"></div>
 
@@ -142,17 +133,7 @@
           </div>
         </div>
 
-        <div class="ui divider"></div>
-
-        <div class="item">
-          <i class="plug icon"></i>
-          <div class="content">
-            <strong>
-              Need/Want Hardware:
-            </strong>{{stats.wantsHardware}}
-          </div>
-        </div>
-
+       
         <div class="ui divider"></div>
 
         <div class="item">
@@ -175,10 +156,10 @@
   <div
     class="ui pink segment"
     ng-class="{'loading': loading}">
-    <div class="ui header">
+    <div class="ui header  white-text">
       Demographics
     </div>
-    <div class="ui list">
+    <div class="ui list  white-text">
       <div class="item">
         <i class="users icon"></i>
         <div class="content">
@@ -211,18 +192,21 @@
       </div>
     </div>
     <div class="ui divider"></div>
-      <div class="ui list">
+      <div class="ui list  white-text">
         <div class="item">
-          <strong>Fresh:</strong> {{stats.demo.year['2019']}} ({{stats.demo.year['2019'] / stats.total * 100 | number: 1}}%)
+          <strong>Graduated 2019:</strong> {{stats.demo.year['2019']}} ({{stats.demo.year['2019'] / stats.total * 100 | number: 1}}%)
         </div>
         <div class="item">
-          <strong>Soph:</strong> {{stats.demo.year['2018']}} ({{stats.demo.year['2018'] / stats.total * 100 | number: 1}}%)
+          <strong>Graduating 2020:</strong> {{stats.demo.year['2020']}} ({{stats.demo.year['2018'] / stats.total * 100 | number: 1}}%)
         </div>
         <div class="item">
-         <strong>Junior:</strong> {{stats.demo.year['2017']}} ({{stats.demo.year['2017'] / stats.total * 100 | number: 1}}%)
+         <strong>Graduating 2021:</strong> {{stats.demo.year['2021']}} ({{stats.demo.year['2017'] / stats.total * 100 | number: 1}}%)
         </div>
         <div class="item">
-          <strong>Senior:</strong> {{stats.demo.year['2016']}} ({{stats.demo.year['2016'] / stats.total * 100 | number: 1}}%)
+          <strong>Graduating 2022:</strong> {{stats.demo.year['2022']}} ({{stats.demo.year['2016'] / stats.total * 100 | number: 1}}%)
+        </div>
+        <div class="item">
+          <strong>Graduating 2023:</strong> {{stats.demo.year['2023']}} ({{stats.demo.year['2016'] / stats.total * 100 | number: 1}}%)
         </div>
       </div>
     <div class="ui divider"></div>
@@ -230,7 +214,7 @@
       <div
         class="item"
         ng-repeat="school in stats.demo.schools | orderBy: '-count'">
-        <div class="content">
+        <div class="content  white-text">
           <strong>{{school.email}}</strong> : {{school.count}} ({{school.count / stats.total * 100 | number: 1}}%)
           <p>
           <div class="ui purple mini label">

@@ -1,7 +1,7 @@
-@import 'branding';
-@import 'custom';
-$font-body: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
-$font-header: 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
+@import "branding";
+@import "custom";
+$font-body: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+$font-header: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
 
 // Login screen variables
 $login-bg-color: $secondary;
@@ -9,7 +9,7 @@ $login-color: $primary;
 $register-color: $tertiary;
 
 $status-unverified-color: rgb(82, 82, 82);
-$status-incomplete-color: #F5F5F5;
+$status-incomplete-color: #f5f5f5;
 $status-submitted-color: lighten($secondary, 20%);
 $status-admitted-color: $primary;
 $status-confirmed-color: $secondary;
@@ -19,13 +19,13 @@ $status-declined-color: $tertiary;
 $status-rejected-color: red; // Not used
 
 // Sidebar variables
-$sidebar-color: $primary;
+$sidebar-color: $secondary;
 $sidebar-width: 265px;
-$sidebar-transition-time: .5s;
+$sidebar-transition-time: 0.5s;
 $sidebar-tab-size: 55px;
 
 // Page variables
-$page-header-color: $secondary;
+$page-header-color: white;
 
 $brand-primary: $primary;
 $brand-secondary: $secondary;
@@ -33,7 +33,7 @@ $brand-tertiary: $tertiary;
 
 @mixin transform($transforms) {
   -webkit-transform: $transforms;
-          transform: $transforms;
+  transform: $transforms;
 }
 
 @mixin transition-duration($duration) {
@@ -41,15 +41,15 @@ $brand-tertiary: $tertiary;
   transition-duration: $duration;
 }
 
-@import 'login';
-@import 'base';
-@import 'sidebar';
-@import 'page';
-@import 'dashboard';
-@import 'application';
-@import 'verify';
-@import 'team';
-@import 'admin';
+@import "login";
+@import "base";
+@import "sidebar";
+@import "page";
+@import "dashboard";
+@import "application";
+@import "verify";
+@import "team";
+@import "admin";
 
 html,
 body {
@@ -60,7 +60,7 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 300;
 
   > .container {
@@ -82,12 +82,20 @@ body {
 .ui.segment {
   border-radius: 0;
   box-shadow: none;
+  background: transparent;
 }
 input {
   border-radius: 0 !important;
 }
 .ui.button {
   border-radius: 0;
+  &.purple,
+  &.red {
+    background: $primary !important;
+  }
+  &.pink {
+    background: $secondary !important;
+  }
   &.primary {
     background: $primary;
     &:hover {
@@ -114,13 +122,32 @@ input {
 .ui.form select {
   height: 2.5em;
 }
-
+.ui.form input,
+.ui.form select,
+.ui.form textarea {
+  background: #fff !important;
+  color: black;
+}
+.ui.form label {
+  color: white !important;
+}
 fieldset {
   padding: 0;
   border: none;
 }
 
-.ui.search >.results {
+.ui.search > .results {
   width: 100%;
 }
 // @import 'animation';
+.id-check,
+.white-text,
+.ui.header.white-text {
+  color: white;
+}
+.ui.segment {
+  border: none;
+}
+.ui.divider {
+  border: none !important;
+}

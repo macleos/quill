@@ -50,24 +50,9 @@ function canRegister(email, password, callback) {
         message: "Sorry, registration is closed."
       });
     }
-
+    // No email validation
     // Check for emails.
-    Settings.getWhitelistedEmails(function(err, emails) {
-      if (err || !emails) {
-        return callback(err);
-      }
-      for (var i = 0; i < emails.length; i++) {
-        if (validator.isEmail(email) && endsWith(emails[i], email)) {
-          return callback(null, true);
-        }
-      }
-      return callback(
-        {
-          message: "Not a valid educational email."
-        },
-        false
-      );
-    });
+    return callback(null, true);
   });
 }
 

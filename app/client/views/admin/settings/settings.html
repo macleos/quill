@@ -3,11 +3,11 @@
     <!-- Reigstration Open/Close -->
     <div ng-class="{'loading': loading}" class="ui red segment">
       <div class="ui form">
-        <div class="ui header">
+        <div class="ui header white-text">
           Open/Close Registration
         </div>
 
-        <p>
+        <p class="white-text">
           Users will be able to register new accounts within the time period
           specified.
         </p>
@@ -38,11 +38,11 @@
     <!-- Confirmation Date -->
     <div ng-class="{'loading': loading}" class="ui orange segment">
       <div class="ui form">
-        <div class="ui header">
+        <div class="ui header white-text">
           Confirmation Date
         </div>
 
-        <p>
+        <p class="white-text">
           Any users that are accepted will have to confirm by the date selected.
         </p>
 
@@ -63,61 +63,9 @@
   </div>
 </div>
 
-<!-- Additional Options -->
-<div ng-class="{'loading': loading}" class="ui green segment">
-  <div class="ui header">
-    Additional Options
-  </div>
-
-  <div class="column">
-    <div class="ui form">
-      <div class="grouped fields">
-        <div class="field">
-          <div class="ui toggle checkbox">
-            <input
-              type="checkbox"
-              name="allowMinors"
-              ng-class="{true: 'checked', false: ''}[settings.allowMinors]"
-              ng-model="settings.allowMinors"
-              ng-change="updateAllowMinors()"
-            />
-            <label>Allow minors</label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Whitelist -->
-<div ng-class="{'loading': loading}" class="ui green segment">
-  <div class="ui header">
-    Whitelisted Emails
-  </div>
-
-  <div class="ui form">
-    <div
-      class="ui label"
-      ng-repeat="email in whitelist.replace(' ','').split(',')"
-    >
-      {{email}}
-    </div>
-    <br />
-    <br />
-    <div class="field">
-      <textarea class="ui input" type="text" ng-model="whitelist"> </textarea>
-    </div>
-    <div class="field">
-      <div class="ui green button" ng-click="updateWhitelist()">
-        Update
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Waitlist Text Editor -->
 <div ng-class="{'loading': loading}" class="ui blue segment">
-  <div class="ui header">
+  <div class="ui header white-text">
     Waitlist Text
   </div>
   <div class="ui stackable two column grid">
@@ -149,7 +97,7 @@
 
 <!-- Acceptance Text Editor -->
 <div ng-class="{'loading': loading}" class="ui pink segment">
-  <div class="ui header">
+  <div class="ui header white-text">
     Acceptance Text
   </div>
   <div class="ui stackable two column grid">
@@ -180,7 +128,7 @@
 </div>
 
 <div ng-class="{'loading': loading}" class="ui orange segment">
-  <div class="ui header">
+  <div class="ui header white-text">
     Confirmation Text
   </div>
   <div class="ui stackable two column grid">

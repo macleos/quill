@@ -5,7 +5,7 @@
 
   <div class="ui stackable centered page grid">
     <div class="column">
-      <div class="ui status segment">
+      <div class="ui status segment white-text">
         <div class="small title">
           Your status:
         </div>
@@ -34,7 +34,7 @@
 
         <div ng-if="user.profile.name.length > 0">
           <p>
-            <strong>
+            <strong class="white-text">
               Welcome back, {{user.profile.name}}!
             </strong>
           </p>
@@ -56,6 +56,7 @@
         </div>
 
         <div
+          class="deadline"
           ng-class="settings.timeClose"
           ng-if="!dashState('admittedAndCanConfirm') || !dashState('admittedAndCannotConfirm') || !dashState('confirmed') || !dashState('declined')"
         >

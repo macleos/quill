@@ -3,7 +3,7 @@ const angular = require("angular");
 angular
   .module("reg")
   .constant("EVENT_INFO", {
-    NAME: "HackMIT 2015"
+    NAME: "Hack the Burgh 2020"
   })
   .constant("DASHBOARD", {
     UNVERIFIED:
@@ -26,7 +26,7 @@ angular
     CONFIRMED_NOT_PAST_TITLE:
       "You can edit your confirmation information until [CONFIRM_DEADLINE]",
     DECLINED:
-      "We're sorry to hear that you won't be able to make it to HackMIT 2015! :(\nMaybe next year! We hope you see you again soon."
+      "We're sorry to hear that you won't be able to make it to Hack the Burgh 2020! :(\nMaybe next year! We hope you see you again soon."
   })
   .constant("TEAM", {
     NO_TEAM_REG_CLOSED:

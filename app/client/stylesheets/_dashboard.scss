@@ -55,10 +55,19 @@
 
   .segment {
     padding: 36px 36px 12px 36px;
+    border: none;
+    .state.submitted {
+      background: black;
+    }
+    .ui.divider {
+      border: none;
+    }
   }
 
-  .description {
+  .description,
+  .deadline {
     margin-bottom: 24px;
+    color: white;
     .markdown {
       text-align: left;
       margin-bottom: 24px;
