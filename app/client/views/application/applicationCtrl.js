@@ -149,12 +149,30 @@ angular.module("reg").controller("ApplicationCtrl", [
               }
             ]
           },
+          excited: {
+            identifier: "excited",
+            rules: [
+              {
+                type: "empty",
+                prompt: "Why are you excited?"
+              }
+            ]
+          },
+          project: {
+            identifier: "project",
+            rules: [
+              {
+                type: "empty",
+                prompt: "Tell us about a project"
+              }
+            ]
+          },
           adult: {
             identifier: "adult",
             rules: [
               {
                 type: "allowMinors",
-                prompt: "You must be an adult, or an MIT student."
+                prompt: "You must be an adult"
               }
             ]
           }
@@ -166,7 +184,7 @@ angular.module("reg").controller("ApplicationCtrl", [
       if ($(".ui.form").form("is valid")) {
         _updateUser();
       } else {
-        swal("Uh oh!", "Please Fill The Required Fields", "error");
+        swal("Uh oh!", "Please fill in the required fields!", "error");
       }
     };
   }

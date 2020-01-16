@@ -74,22 +74,34 @@
           </div>
 
           <div class="field">
-            <label>I would describe myself as a...</label>
-            <input
-              type="text"
-              placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
+            <label>Why are you excited about Hack the Burgh?</label>
+            <textarea
               ng-model="user.profile.description"
-            />
+              data-validate="excited"
+            >
+            </textarea>
           </div>
 
           <div class="field">
             <label>
-              What would you like to learn or get out of Hack the Burgh?
-              (optional)
+              Describe an interesting project you've been involved in.
             </label>
-            <textarea ng-model="user.profile.essay"> </textarea>
+            <textarea ng-model="user.profile.essay" data-validate="project">
+            </textarea>
           </div>
-
+          <div class="field">
+            <label> CV (required) </label>
+            <p class="white-text">
+              Upload your CV. PDF preferred!
+            </p>
+            <a
+              target="_blank"
+              href="https://www.dropbox.com/request/wWdrhvx1kDnH1C2tdRbU"
+              class="ui pink button"
+            >
+              Upload
+            </a>
+          </div>
           <div class="field" ng-hide="isMitStudent">
             <p>
               <strong class="id-check">
