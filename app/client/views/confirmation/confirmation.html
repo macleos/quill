@@ -22,7 +22,25 @@
               required
             />
           </div>
-
+          <div class="field">
+            <label> Shirt Size (required) </label>
+            <p>
+              Let's get you some swag!
+            </p>
+            <select
+              name="shirt"
+              ng-model="user.confirmation.shirtSize"
+              required
+            >
+              <option value="">Shirt Size</option>
+              <option value="XS">Extra Small</option>
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>
+              <option value="XXL">Extra Extra Large</option>
+            </select>
+          </div>
           <div class="field">
             <label> Dietary Restrictions </label>
 
