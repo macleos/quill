@@ -201,7 +201,7 @@ controller.sendAcceptedEmail = function(email, callback) {
   var locals = {
     title: "Congratulations!",
     body:
-      "You've been admitted to Hack the Burgh 2020! Please visit my.2020.hacktheburgh.com to confirm your spot!"
+      "You've been admitted to Hack the Burgh 2020! Please visit <a href='https://my.2020.hacktheburgh.com'>my.2020.hacktheburgh.com</a> to confirm your spot!"
   };
 
   /**
@@ -210,7 +210,7 @@ controller.sendAcceptedEmail = function(email, callback) {
    *   verifyUrl: the url that the user must visit to verify their account
    * }
    */
-  sendOne("email-basic", options, locals, function(err, info) {
+  sendOne("email-html", options, locals, function(err, info) {
     if (err) {
       console.log(err);
     }
