@@ -648,10 +648,14 @@ UserController.admitUser = function(id, user, callback) {
       {
         new: true
       },
-      callback
+      (err, data) => {
+        if (!err) {
+          Mailer.sendAcceptedEmail(data.email);
+        }
+        callback(err, data);
+      }
     );
   });
-  Mailer.sendAcceptedEmail(user.email);
 };
 
 /**
