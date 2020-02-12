@@ -192,5 +192,35 @@ controller.sendPasswordChangedEmail = function(email, callback) {
     }
   });
 };
+controller.sendAcceptedEmail = function(email, callback) {
+  var options = {
+    to: email,
+    subject: "[" + HACKATHON_NAME + "] - Your application was successful!"
+  };
+
+  var locals = {
+    title: "Congratulations!",
+    body:
+      "You've been admitted to Hack the Burgh 2020! Please visit my.2020.hacktheburgh.com to confirm your spot!"
+  };
+
+  /**
+   * Eamil-verify takes a few template values:
+   * {
+   *   verifyUrl: the url that the user must visit to verify their account
+   * }
+   */
+  sendOne("email-basic", options, locals, function(err, info) {
+    if (err) {
+      console.log(err);
+    }
+    if (info) {
+      console.log(info.message);
+    }
+    if (callback) {
+      callback(err, info);
+    }
+  });
+};
 
 module.exports = controller;

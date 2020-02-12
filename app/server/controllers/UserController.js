@@ -651,6 +651,7 @@ UserController.admitUser = function(id, user, callback) {
       callback
     );
   });
+  Mailer.sendAcceptedEmail(user.email);
 };
 
 /**
