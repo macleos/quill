@@ -14,6 +14,7 @@ const LoginCtrl = require("../views/login/loginCtrl.js");
 const ResetCtrl = require("../views/reset/resetCtrl.js");
 const SidebarCtrl = require("../views/sidebar/sidebarCtrl.js");
 const TeamCtrl = require("../views/team/teamCtrl.js");
+const InfoCtrl = require("../views/info/infoCtrl.js");
 const VerifyCtrl = require("../views/verify/verifyCtrl.js");
 
 angular
@@ -24,7 +25,7 @@ angular
     "$locationProvider",
     function($stateProvider, $urlRouterProvider, $locationProvider) {
       // For any unmatched url, redirect to /state1
-      $urlRouterProvider.otherwise("/404");
+      // $urlRouterProvider.otherwise("/404");
 
       // Set up de states
       $stateProvider
@@ -117,6 +118,10 @@ angular
               return SettingsService.getPublicSettings();
             }
           }
+        })
+        .state("app.info", {
+          url: "/info",
+          templateUrl: "views/info/info.html"
         })
         .state("app.admin", {
           views: {
